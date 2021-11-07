@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap");
+:root {
+	--generic-easing: all 0.3s cubic-bezier(0.75, 0.02, 0.25, 0.97) 0s;
+}
+@keyframes nord-frost-cycle {
+	25% {
+		color: #5e81ac;
+	}
+	50% {
+		color: #81a1c1;
+	}
+	75% {
+		color: #88c0d0;
+	}
+	100% {
+		color: #8fbcbb;
+	}
+}
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -7,14 +24,19 @@
 body {
 	background-color: #3b4252;
 }
-h1 {
+#name:hover {
+	text-shadow: 4px 4px #434c5e;
+	transition: var(--generic-easing);
+	animation: nord-frost-cycle 5s infinite;
+}
+#name {
 	font-size: 50px;
 	font-family: "Fira Mono", monospace;
 	color: #d8dee9;
 	text-decoration: none;
 	text-align: center;
 	position: relative;
-	top: -28px;
+	top: -35px;
 	width: 0;
 	left: 50%;
 	right: 50%;
@@ -37,12 +59,11 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 15px 10%;
+	padding: 25px 10%;
 	background-color: #2e3440;
 }
 .navbar {
 	list-style: none;
-	top: 8px;
 	position: relative;
 }
 .navbar li {
@@ -54,9 +75,11 @@ header {
 	transition: all 0.3s cubic-bezier(0.75, 0.02, 0.25, 0.97) 0s;
 }
 .navbar li a:hover,
-#cc:hover {
+.navbar li p:hover {
 	transition: all 0.3s cubic-bezier(0.75, 0.02, 0.25, 0.97) 0s;
+	text-shadow: 2px 2px #434c5e;
 	color: #7196b6 !important;
+	animation: nord-frost-cycle 5s infinite;
 }
 html {
 	scroll-behavior: smooth;
