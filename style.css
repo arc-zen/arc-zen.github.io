@@ -47,8 +47,7 @@ body {
 #name:hover {
 	text-shadow: 4px 4px #434c5e;
 	transition: var(--generic-easing);
-	animation: nord-rainbow-cycle 5s infinite;
-	content: "arczen#7561";
+	/* animation: nord-rainbow-cycle 5s infinite; */
 }
 #name {
 	font-size: 50px;
@@ -65,11 +64,16 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	/* animation: nord-rainbow-cycle 5s infinite; */
+}
+.animated-nord-rainbow-cycle {
+	animation-name: nord-rainbow-cycle;
 }
 li,
 a,
 button,
-p {
+p,
+h1 {
 	font-family: "Fira Mono", monospace;
 	font-size: 16px;
 	color: #d8dee9;
@@ -82,25 +86,44 @@ header {
 	padding: 30px 10%;
 	background-color: #2e3440;
 }
-.navbar {
+.topbar {
 	list-style: none;
 	position: relative;
 }
-.navbar li {
+/* .topbar li {
 	display: inline-block;
 	padding: 0px 200px;
 }
-.navbar li a,
-.navbar li p {
+.topbar li a,
+.topbar li p {
 	transition: var(--generic-easing);
 }
-.navbar li a:hover,
-.navbar li p:hover {
+.topbar li a:hover,
+.topbar li p:hover {
 	transition: var(--generic-easing);
 	text-shadow: 2px 2px #434c5e;
 	color: #7196b6 !important;
 	animation: nord-frost-cycle 5s infinite;
-}
+} */
 html {
 	scroll-behavior: smooth;
+}
+#emoticon {
+	right: 44vw;
+	position: relative;
+	top: 0vh;
+	width: 200px;
+	line-height: 0;
+}
+#emoticon:hover {
+	transition: var(--generic-easing);
+	text-shadow: 2px 2px #434c5e;
+	animation: nord-rainbow-cycle 5s infinite;
+}
+#typewriterText {
+	display: inline-block;
+	font-size: 60px;
+	top: 6vw;
+	left: 6vw;
+	position: relative;
 }
