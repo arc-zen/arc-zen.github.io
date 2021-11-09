@@ -110,7 +110,7 @@ const twl = [
 ];
 function typingEffect(element, speed) {
 	let text = twl[Math.floor(Math.random() * twl.length)];
-	element.innerHTML = "";
+	element.innerHTML = "> ";
 	var i = 0;
 	var timer = setInterval(function () {
 		if (i < text.length) {
