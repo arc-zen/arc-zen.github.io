@@ -93,7 +93,7 @@ function changeEmoticon(i = Math.floor(Math.random() * emoticonsList.length)) {
 }
 var emoticonLoop = setInterval(function () {
 	changeEmoticon();
-}, 15000);
+}, 5000);
 $("#emoticon").click(function () {
 	changeEmoticon();
 });
@@ -105,8 +105,8 @@ const twl = [
 	"Student.",
 	"Dreamer.",
 	"Extravagant.",
-	"Fruity",
-	"",
+	"Fruity.",
+	"Scintillator.",
 ];
 function typingEffect(element, speed) {
 	let text = twl[Math.floor(Math.random() * twl.length)];
@@ -122,18 +122,6 @@ function typingEffect(element, speed) {
 	}, speed);
 }
 typingEffect(document.getElementById("typewriterText"), 150);
-setInterval(() => {
+var tw = setInterval(() => {
 	typingEffect(document.getElementById("typewriterText"), 150);
 }, 5000);
-// $("#typewriterText").on("load", function() {
-// 	const _text = ["Programmer.", "Graphics Designer", "Student.", "Gamer."]
-// 	while (i = 0, i < _text.length) {
-// 		typeWriter(_text[i])
-// 		pause(5000)
-// 		$("#typewriterText").fadeOut(function() {
-// 			$("#typewrtierText").text("")
-// 		}).fadeIn();
-// 		i++
-// 	}
-
-// })
