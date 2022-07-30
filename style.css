@@ -1,208 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap");
 :root {
-	--generic-easing: all 0.3s cubic-bezier(0.75, 0.02, 0.25, 0.97) 0s;
-}
-@keyframes nord-frost-cycle {
-	25% {
-		color: #5e81ac;
-	}
-	50% {
-		color: #81a1c1;
-	}
-	75% {
-		color: #88c0d0;
-	}
-	100% {
-		color: #8fbcbb;
-	}
-}
-@keyframes nord-rainbow-cycle {
-	16.6% {
-		color: #bf616a;
-	}
-	33.2% {
-		color: #d08770;
-	}
-	49.8% {
-		color: #ebcb8b;
-	}
-	66.4% {
-		color: #a3be8c;
-	}
-	83% {
-		color: #5e81ac;
-	}
-	100% {
-		color: #b48ead;
-	}
-}
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-html {
-	overflow: hidden;
-}
-*:hover {
-	text-shadow: 2px 2px #434c5e;
+	--fc: #ffffff;
 }
 body {
-	background-color: #434c5e;
+	background-color: var(--bg);
+	transition: 0.25s;
 }
-#name:hover {
-	text-shadow: 4px 4px #434c5e;
-	transition: var(--generic-easing);
-	/* animation: nord-rainbow-cycle 5s infinite; */
+
+.construction-text {
+	font-family: monospace;
+	color: var(--fc);
+	filter: drop-shadow(0px 0px 4px white);
 }
-#name {
-	font-size: 50px;
-	font-family: "Fira Mono", monospace;
-	color: #d8dee9;
-	text-decoration: none;
-	text-align: center;
-	position: relative;
-	width: 0;
+
+#construction {
+	position: absolute;
 	left: 50%;
-	right: 50%;
-	margin: 0;
-	line-height: 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	/* animation: nord-rainbow-cycle 5s infinite; */
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+	text-align: center;
+	backdrop-filter: sepia(1);
 }
-.animated-nord-rainbow-cycle {
-	animation-name: nord-rainbow-cycle;
+
+/* #theme-icon {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin: 15px;
+	transition: 1s;
+	opacity: 0.5;
+	z-index: 1;
 }
-li,
-a,
-button,
-p {
-	font-family: "Fira Mono", monospace;
-	font-size: 16px;
-	color: #d8dee9;
-	text-decoration: none;
-}
-h1 {
-	font-family: "Fira Mono", monospace;
-	font-size: 60px;
-	color: #d8dee9;
-	text-decoration: none;
-}
-header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 30px 10%;
-	background-color: #3b4252;
-}
-.topbar {
-	list-style: none;
-	position: relative;
-}
-html {
-	scroll-behavior: smooth;
-}
-#emoticon {
-	right: 43vw;
-	position: relative;
-	top: 0vh;
-	width: 200px;
-	line-height: 0;
-}
-#emoticon:hover {
-	transition: var(--generic-easing);
-	text-shadow: 2px 2px #434c5e;
-	animation: nord-rainbow-cycle 5s infinite;
-}
-#typewriterText {
-	display: inline-block;
-	font-size: 60px;
-	top: 4vw;
-	left: 4vw;
-	position: relative;
-}
-#typewriterText:hover {
-	transition: var(--generic-easing);
-	animation: nord-rainbow-cycle 5s infinite;
-	text-shadow: 4px 4px #434c5e;
-}
-#credits {
-	left: 42vw;
-	position: relative;
-	top: 0vh;
-	width: auto;
-	line-height: 0;
-	opacity: 0.1;
-	animation: nord-rainbow-cycle 5s infinite;
-}
-#credits:hover {
-	transition: var(--generic-easing);
+#theme-icon:hover {
 	opacity: 1;
-	animation: nord-rainbow-cycle 5s infinite;
-}
-#aboutme {
-	position: relative;
-	top: 6vw;
-	left: 4vw;
-}
-#divider1 {
-	width: 10vw;
-	top: 5vw;
-	position: relative;
-	left: 4vw;
-	height: 5px;
-	border: 5px solid #d8dee9;
-}
-#divider1:hover {
-	width: 15vw;
-	transition: var(--generic-easing);
-	animation: nord-rainbow-cycle 5s infinite;
-}
-#portfolio {
-	background-color: #3b4252;
-	width: 95vw;
-	height: 54vw;
-	position: relative;
-	top: 8vw;
-	margin: auto;
-	border-radius: 10px;
-}
-.generic-h1 {
-	left: 2vw;
-	top: 1vw;
-	position: relative;
-}
-.grid {
-	display: inline;
-}
-.card {
-	background-color: #2e3440;
-	width: 15%;
-	display: inline-block;
-	border-radius: 20px;
-	margin: 20px 5px 20px 20px;
-}
-.card-img {
-	object-fit: contain;
-	width: 100%;
-	height: 200px;
-}
-.cardtext {
-	position: relative;
-	margin: auto;
-	text-align: center;
-	margin-bottom: 5px;
-}
-.subcardtext {
-	position: relative;
-	margin: auto;
-	text-align: center;
-	margin-bottom: 5px;
-	font-size: 8px;
-	font-style: italic;
-	color: #4c566a;
-	text-shadow: 0px 0px transparent !important;
-	padding: 5px;
+} */
+canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
 }

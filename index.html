@@ -1,60 +1,19 @@
-<!DOCTYPE html>
 <html>
 	<head>
-		<title>arc-zen</title>
+		<title>arczen</title>
 		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body scroll="no">
-		<header>
-			<nav>
-				<div class="topbar">
-					<h1 id="name" class="1">&lt;/arczen></h1>
-					<p id="emoticon">o/</p>
-					<p id="credits">made with ❤ by arczen#7561</p>
-				</div>
-			</nav>
-		</header>
-		<h1 id="typewriterText"></h1>
-		<hr id="divider1" />
-		<p id="aboutme">
-			I'm arczen. I am a computer nerd who likes to mess around with
-			computer stuff (shocker).<br />
-			I really don't have much to say here.
-		</p>
-		<div id="portfolio">
-			<h1 class="generic-h1">GFX Work</h1>
-			<div class="grid">
-				<div class="card">
-					<img src="./img/skull.png" class="card-img" />
-					<p class="cardtext">Skull Cape</p>
-					<p class="subcardtext">
-						"ur style is so 2012" -cracked-shots
-					</p>
-				</div>
-				<div class="card">
-					<img src="./img/depressionpr.png" class="card-img" />
-					<p class="cardtext">
-						<a href="https://discord.gg/zdp9ZkSFtT"
-							>"Depressed" Cape</a
-						>
-					</p>
-					<p class="subcardtext">
-						"why is the capename depression" -kaimson
-					</p>
-				</div>
-				<div class="card">
-					<img src="./img/nordic_trianglesR.png" class="card-img" />
-					<p class="cardtext">Nordic Triangles</p>
-					<p class="subcardtext" title="Carrizo by Crisosto Apache">
-						how far will I walk against the night?<br />
-						conforming to a captivity I had never realized
-					</p>
-				</div>
-			</div>
+	<body>
+		<!-- <img src="img/dark_mode.svg" id="theme-icon" /> -->
+		<div id="construction">
+			<p class="construction-text">under construction since the 29th of July, 2022</p>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="./deps/jquery.keyframes.min.js"></script>
-		<script src="./index.js"></script>
+		<script src="./deps/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+		<!-- <script type="module" src="secondary.js"></script>
+		<script src="index.js"></script> -->
+		<script type="module" src="min/secondary.min.js"></script>
+		<script src="min/index.min.js"></script>
 	</body>
 </html>

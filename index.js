@@ -1,127 +1,55 @@
-function copyContacts(c) {
-	navigator.clipboard.writeText(c);
+function numberWithCommas(x) {
+	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-// document.getElementById('cc').addEventListener('click', function (event) {
-//     console.log("copied successfully");
-//     copyContacts("arczen#7561");
-//     cc.innerHTML = "Copied!";
-// 	setTimeout(function () {
-// 		cc.innerHTML = "Contact";
-// 	}, 1000);
-// })
-// on hover, set opacity to 0 with transition, then change text, then change back to 1 opacity.
-// $("#name").addEventListener("mouseover", function(event) {
-// 	var name = document.getElementById("name")
-// 	name.innerHTML = "arczen#7561"
-// 	setTimeout(() => {
-// 		setTimeout(() => {
-// 			name.innerHTML = "&lt;/arczen>"
-// 		}, 3000)
-// 	}, 3000)
-// })
-// $("#name").mouseenter(function() {
-// 	$("#name").fadeTo(2000, 0, function() {
-// 		$("#name").text("arczen#7561")
-// 		$("#name").stop().hide().fadeTo(2000, 1)
-// 	})
-// })
-// $("#name").mouseleave(function() {
-// 	$("#name").fadeTo(2000, 0, function() {
-// 		$("#name").text("</arczen>")
-// 		$("#name").stop().hide().fadeTo(2000, 1)
-// 	})
-// })
-// $.keyframe.define([{
-//     name: 'nord-rainbow-cycle',
-// 	"16.6%": { "color": "#bf616a" },
-// 	"33.2%": { "color": "#d08770" },
-// 	"49.8%": { "color": "#ebcb8b" },
-// 	"66.4%": { "color": "#a3be8c" },
-// 	"83%:": { "color": "#5e81ac" },
-// 	"100%": { "color": "#b48ead" },
-// }]);
-$("#name").click(function () {
-	console.info(`clicked on ${$("#name").text()}`);
-	$("#name")
-		.fadeOut(function () {
-			if ($("#name").hasClass("1")) {
-				$("#name").addClass("2");
-				$("#name").removeClass("1");
-				$("#name").text("arczen#7561");
-			} else {
-				$("#name").addClass("1");
-				$("#name").removeClass("2");
-				$("#name").text("</arczen>");
-			}
-		})
-		.fadeIn();
-});
-// random shiz
-function pause(milliseconds) {
-	var dt = new Date();
-	while (new Date() - dt <= milliseconds) {
-		/* Do nothing */
+// if (!!Cookies.get("theme")) {
+// 	Cookies.set("theme", "light");
+// } else {
+// 	if (Cookies.get("theme") == "dark") {
+// 		document.documentElement.style.setProperty("--bg", "#111");
+// 		document.documentElement.style.setProperty("--fc", "#fff");
+// 		document.getElementById("theme-icon").src = "img/light_mode.svg";
+// 	} else if (Cookies.get("theme") == "light") {
+// 		document.documentElement.style.setProperty("--bg", "#fff");
+// 		document.documentElement.style.setProperty("--fc", "#111");
+// 		document.getElementById("theme-icon").src = "img/dark_mode.svg";
+// 	}
+// }
+function diff() {
+	let a = (Math.round(Date.now() - 1659148744284) / 86400000).toFixed(1);
+	let b = numberWithCommas(Date.now() - 1659148744284);
+	return `for ${a} days || (${b} ms)`;
+}
+function get_timer() {
+	const timer = document.createElement("p");
+	timer.setAttribute("id", "construction-timer");
+	timer.classList.add("construction-text");
+	timer.innerHTML = diff();
+	return timer;
+}
+function timer(timer) {
+	document.getElementById("construction").appendChild(get_timer());
+}
+
+setInterval(() => {
+	if (document.hasFocus()) {
+		if (!!document.getElementById("construction-timer")) document.getElementById("construction-timer").innerHTML = diff();
+		else timer(get_timer());
 	}
-}
-// emoticons
-const emoticonsList = [
-	"(*ﾟｰﾟ )ゞ",
-	"꒰✩’ω`ૢ✩ ꒱",
-	"( ՞ ਊ  ՞)",
-	"ヾ( ｏ･ω･)ﾉ",
-	"ヽ|･◇･ |ゞ",
-	"꒰๑ ᷄ω ᷅꒱",
-	"( ͡° ͜ʖ ͡°)",
-	"☆ミ",
-	"๑(◕‿◕)๑",
-	"(；☉_☉)",
-	"(˵¯͒n¯͒˵)",
-	"ಥ‿ಥ",
-	"(o_ _)ﾉ彡☆",
-	"(｡ﹷ ‸ ﹷ ✿)",
-	"( ◥◣_◢◤ )",
-	"(╹∀◠)",
-	"╰(°∇≦*)╮",
-	"( 〃▽〃)",
-];
-function changeEmoticon(i = Math.floor(Math.random() * emoticonsList.length)) {
-	$("#emoticon")
-		.fadeOut(function () {
-			$("#emoticon").text(emoticonsList[i]);
-		})
-		.fadeIn();
-}
-var emoticonLoop = setInterval(function () {
-	changeEmoticon();
-}, 5000);
-$("#emoticon").click(function () {
-	changeEmoticon();
-});
-// typewriter
-const twl = [
-	"Developer.",
-	"Graphics Designer.",
-	"Explorer.",
-	"Student.",
-	"Dreamer.",
-	"Extravagant.",
-	"Fruity.",
-	"Scintillator.",
-];
-function typingEffect(element, speed) {
-	let text = twl[Math.floor(Math.random() * twl.length)];
-	element.innerHTML = "> ";
-	var i = 0;
-	var timer = setInterval(function () {
-		if (i < text.length) {
-			element.append(text.charAt(i));
-			i++;
-		} else {
-			clearInterval(timer);
-		}
-	}, speed);
-}
-typingEffect(document.getElementById("typewriterText"), 150);
-var tw = setInterval(() => {
-	typingEffect(document.getElementById("typewriterText"), 150);
-}, 5000);
+}, 75);
+
+// document.getElementById("theme-icon").onclick = () => {
+// 	console.log("[fancy code stuff] theme buttom pressed");
+// 	if (Cookies.get("theme") == "dark") {
+// 		document.documentElement.style.setProperty("--bg", "#fff");
+// 		document.documentElement.style.setProperty("--fc", "#111");
+// 		scene.background = new THREE.Color(0xffffff);
+// 		Cookies.set("theme", "light");
+// 		document.getElementById("theme-icon").src = "img/dark_mode.svg";
+// 	} else if (Cookies.get("theme") == "light") {
+// 		document.documentElement.style.setProperty("--bg", "#111");
+// 		document.documentElement.style.setProperty("--fc", "#fff");
+// 		scene.background = new THREE.Color(0x000000);
+// 		Cookies.set("theme", "dark");
+// 		document.getElementById("theme-icon").src = "img/light_mode.svg";
+// 	}
+// };
