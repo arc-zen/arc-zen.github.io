@@ -1,42 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
 :root {
-	--fc: #ffffff;
+	--text-color-1: rgb(220, 230, 255);
+	--text-color-2: rgb(54, 69, 107);
+	--bg-color-1: rgb(0, 12, 25);
+	--bg-color-2: rgb(0, 15, 30);
+	--bg-color-3: rgb(0, 30, 60);
+
+	--font: "Lato", sans-serif;
+}
+@keyframes pageLoad_textAnim {
+	0% {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
 }
 body {
-	background-color: var(--bg);
-	transition: 0.25s;
+	background-color: var(--bg-color-1);
 }
-
-.construction-text {
-	font-family: monospace;
-	color: var(--fc);
-	filter: drop-shadow(0px 0px 4px white);
+#navbar {
+	border-bottom: 2px dashed var(--bg-color-3);
+	background-color: var(--bg-color-2);
+	padding: 16px;
 }
-
-#construction {
+#namecard {
+	color: var(--text-color-1);
+	font-family: var(--font);
+	margin: 0px !important;
+	font-size: 24px;
+}
+#contact,
+#projects {
+	color: var(--text-color-2);
+	font-family: var(--font);
+	margin: 0px !important;
+	font-size: 16px;
+}
+.seperator-1 {
+	border: 2px solid var(--bg-color-3);
+	width: 0px;
+	height: 15px;
+	margin: 0px 8px 0px 8px;
+}
+.seperator-2 {
+	border: 2px solid var(--bg-color-3);
+	width: 0px;
+	height: 10px;
+	margin: 0px 8px 0px 8px;
+}
+ul > li {
+	display: inline-block;
+}
+#intro {
+	color: var(--text-color-1);
+	font-family: var(--font);
+	font-size: 50px;
 	position: absolute;
 	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	padding: 10px;
-	text-align: center;
-	backdrop-filter: sepia(1);
-}
-
-/* #theme-icon {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	margin: 15px;
-	transition: 1s;
-	opacity: 0.5;
-	z-index: 1;
-}
-#theme-icon:hover {
-	opacity: 1;
-} */
-canvas {
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: -1;
+	transform: translate(-50%, 0);
+	top: 10rem;
 }
