@@ -1,87 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
-:root {
-	--text-color-1: rgb(220, 230, 255);
-	--text-color-2: rgb(54, 69, 107);
-	--bg-color-1: rgb(0, 12, 25);
-	--bg-color-2: rgb(0, 15, 30);
-	--bg-color-3: rgb(0, 30, 60);
+h1 {
+    margin: 5px 10px 0px 10px;
+}
 
-	--font: "Lato", sans-serif;
+.tryinline {
+    display: flex;
 }
-@keyframes pageLoad_textAnim {
-	0% {
-		transform: translateY(20px);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0px);
-		opacity: 1;
-	}
-}
-body {
-	background-color: var(--bg-color-1);
-}
-#navbar {
-	border-bottom: 2px dashed var(--bg-color-3);
-	background-color: var(--bg-color-2);
-	padding: 16px;
-}
-#namecard {
-	color: var(--text-color-1);
-	font-family: var(--font);
-	margin: 0px !important;
-	font-size: 24px;
-}
-#contact,
-#projects {
-	color: var(--text-color-2);
-	font-family: var(--font);
-	margin: 0px !important;
-	font-size: 16px;
-}
-.seperator-1 {
-	border: 2px solid var(--bg-color-3);
-	width: 0px;
-	height: 15px;
-	margin: 0px 8px 0px 8px;
-}
-.seperator-2 {
-	border: 2px solid var(--bg-color-3);
-	width: 0px;
-	height: 10px;
-	margin: 0px 8px 0px 8px;
-}
-ul > li {
-	display: inline-block;
-}
-#intro {
-	color: var(--text-color-1);
-	font-family: var(--font);
-	font-size: 50px;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0);
-	top: 10rem;
-}
-a {
-	text-decoration: none;
-	color: inherit;
-}
-.uanchor {
-	text-decoration: underline var(--text-color-2) dashed 2px;
-}
-.discord {
-	color: #5865F2;
-}
-.discord::before {
-	display: inline-block;
-	content: " ";
-	background-image: url("img/discord.svg");
-	background-size: 50px 50px;
-	height: 50px;
-	width: 50px;
-	padding-left: 5px;
-	padding-right: 5px;
-	background-position-y: 5px;
-	background-repeat: no-repeat;
+
+.tryinline > span {
+    padding-right: 15px;
+    content
 }
