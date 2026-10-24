@@ -1,8 +1,14 @@
 // scripts/build-menu.js
 import { writeFileSync } from "node:fs";
 
-const URL = process.env.MENU_URL;
-const API_KEY = process.env.MENU_API_KEY; // optional, only if the endpoint needs one
+const BASE_URL = process.env.MENU_URL;       // endpoint without the date
+const API_KEY = process.env.MENU_API_KEY;    // optional
+
+// Today's date in Hawaii time, formatted YYYY-MM-DD
+const today = new Date().toLocaleDateString("en-CA", { timeZone: "Pacific/Honolulu" });
+
+const url = new URL(BASE_URL);
+url.searchParams.set("date", today);
 
 function toText(meals) {
   const lines = [];
@@ -22,16 +28,16 @@ function toText(meals) {
   return lines.join("\n");
 }
 
-const headers = API_KEY ? { "API-Key": API_KEY } : {};
-const res = await fetch(URL, { headers });
-if (!res.ok) throw new Error(`HTTP ${res.status}`);
+const headers = API_KEY ? { "Api-Key": API_KEY } : {};
+const res = await fetch(url, { headers });
+if (!res.ok) throw new Error(`HTTP ${res.status} from ${url.origin}`);
 
 const meals = await res.json();
 if (!Array.isArray(meals) || meals.length === 0) {
-  // Don't overwrite a good menu with an empty or broken response
+  // Keep the previous menu.txt rather than overwrite it with nothing
   throw new Error("Unexpected or empty response; keeping the previous menu.txt");
 }
 
 const stamp = new Date().toLocaleString("en-US", { timeZone: "Pacific/Honolulu" });
-writeFileSync("menu.txt", `Updated ${stamp} HST\n\n${toText(meals)}`);
-console.log("Wrote menu.txt");
+writeFileSync("menu.txt", `Menu for ${today}\nUpdated ${stamp} HST\n\n${toText(meals)}`);
+console.log(`Wrote menu.txt for ${today}`);
