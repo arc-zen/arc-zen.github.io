@@ -1,0 +1,34 @@
+name: Update menu text
+
+on:
+  schedule:
+    # 20:00 UTC = 10:00 AM Hawaii (HST, no daylight saving), Monday to Friday
+    - cron: "0 20 * * 1-5"
+  workflow_dispatch:  # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build menu.txt
+        env:
+          MENU_URL: ${{ secrets.MENU_URL }}
+          MENU_API_KEY: ${{ secrets.MENU_API_KEY }}
+        run: node scripts/build-menu.js
+
+      - name: Commit if changed
+        run: |
+          git config user.name "menu-bot"
+          git config user.email "menu-bot@users.noreply.github.com"
+          git add menu.txt
+          git diff --quiet --cached || git commit -m "Update menu"
+          git push
