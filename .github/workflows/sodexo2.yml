@@ -23,7 +23,7 @@ jobs:
         env:
           MENU_URL: ${{ secrets.MENU_URL }}
           MENU_API_KEY: ${{ secrets.MENU_API_KEY }}
-        run: node scripts/build-menu.js
+        run: node scripts/sodexo.js
 
       - name: Commit if changed
         run: |
