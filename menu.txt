@@ -1,61 +1,36 @@
-Menu for 2026-10-25
-Updated 10/25/2026, 7:49:23 PM HST
-
-BRUNCH
-    Bliss
-        - Vanilla Pudding [veg] (120 cal)
-        - Two Chocolate Chip Cookies [veg] (227 cal)
-        - Donut Holes [veg] (1376 cal)
-    Mix
-        - Three Bean Salad [veg] (89 cal)
-    Savory
-        - Pepper Jack Cheese, Sliced [veg] (53 cal)
-        - Caramelized Onions [vegan] (18 cal)
-        - Scrambled Tofu [vegan] (97 cal)
-        - Scrambled Eggs [veg] (189 cal)
-        - Hash Brown Cubed Potato [vegan] (174 cal)
-        - Little Smokies (116 cal)
-    Showcase
-        - English Muffin [veg] (291 cal)
-        - White Rice [vegan] (187 cal)
-        - Brown Rice [vegan] (114 cal)
-        - Crispy Tofu and Vegetable Stir Fry [veg] (268 cal)
-    Simple Servings
-        - Thick & Zesty Chili (265 cal)
-        - White Rice [vegan] (187 cal)
-        - Steamed Corn [vegan] (75 cal)
-        - Beans Cannellini, Kale, Tuscan, [vegan] (156 cal)
-    Sizzle
-        - Grilled Cheese [veg] (519 cal)
-        - French Fries [vegan] (228 cal)
-        - Cheeseburger (373 cal)
-    Spoonful
-        - American Bounty Vegetable Soup [vegan] (45 cal)
-        - Oatmeal [vegan] (116 cal)
+Menu for 2026-10-26
+Updated 10/26/2026, 1:32:36 PM HST
 
 DINNER
     Bliss
-        - Chocolate Pudding [veg] (180 cal)
-        - Two Butter Sugar Cookies [veg] (220 cal)
+        - Cherry Cobbler with Biscuit Topping [veg] (178 cal)
+        - Chocolate Pudding [veg] (129 cal)
     Savory
-        - Steamed Broccoli [vegan] (30 cal)
-        - Fried Brown Rice [vegan] (105 cal)
-        - Penne Bolognese Casserette (350 cal)
+        - Alfredo Pasta Bake [veg] (423 cal)
+        - Garlic Crostini [veg] (90 cal)
+        - Garlic Roasted Green Beans [vegan] (47 cal)
     Showcase
-        - Chicken Gravy (29 cal)
         - Brown Rice [vegan] (114 cal)
-        - Vegetarian Chili [veg] (26 cal)
-        - Roasted Corn [vegan] (89 cal)
-        - Marinated Kale Salad [veg] (17 cal)
+        - Rigatoni Pasta [vegan] (389 cal)
+        - Garlic Crostini [veg] (90 cal)
+        - Classic Caesar Salad (419 cal)
+        - Marinara Sofrito Sauce [vegan] (68 cal)
     Simple Servings
-        - Caribbean Style Ratatouille [veg] (80 cal)
-        - Whole Green Beans [vegan] (32 cal)
-        - White Rice [vegan] (187 cal)
-        - Cranberry Harvest Chicken Breast (198 cal)
+        - Cannellini Bean Ragout [veg] (80 cal)
+        - Grilled Jamaican Pork Tenderloin (132 cal)
+        - Pulao Rice with Peas [vegan] (203 cal)
+        - Simple Roasted Sweet Potatoes [vegan] (85 cal)
+        - Simply Roasted Carrots [vegan] (14 cal)
     Sizzle
+        - Fried Tater Tots [vegan] (284 cal)
         - French Fries [vegan] (228 cal)
-        - Breaded Fish Sandwich (399 cal)
-        - Grilled Cheese [veg] (519 cal)
+        - Fried Chicken Tenders (90 cal)
+        - Cheese Quesadilla [veg] (325 cal)
+        - Chicken Nuggets (350 cal)
     Slices
-        - Pepperoni Pizza (243 cal)
+        - Chicken Tender Parmesan Loafer Sandwich (144 cal)
         - Cheese Pizza [veg] (219 cal)
+        - Pepperoni Pizza (243 cal)
+    Spoonful
+        - Butternut Squash Bisque [veg] (118 cal)
+        - Chicken Tortilla Soup (118 cal)
