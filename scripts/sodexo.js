@@ -1,9 +1,10 @@
 // scripts/build-menu.js
 import { writeFileSync } from "node:fs";
 
-const BASE_URL = vars.MENU_URL;             // endpoint without the date
-const API_KEY = vars.MENU_API_KEY;        // optional
-
+// const BASE_URL = process.env.MENU_URL;             // endpoint without the date
+// const API_KEY = process.env.MENU_API_KEY;        // optional
+const BASE_URL = "https://api-prd.sodexomyway.net/v0.2/data/menu/10230007/1411020";             // endpoint without the date
+const API_KEY = `68717828-b754-420d-9488-4c37cb7d7ef7`;        // optional
 
 // Today's date in Hawaii time, formatted YYYY-MM-DD
 const today = new Date().toLocaleDateString("en-CA", { timeZone: "Pacific/Honolulu" });
