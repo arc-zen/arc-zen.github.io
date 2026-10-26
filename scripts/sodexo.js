@@ -29,7 +29,7 @@ function toText(meals) {
 }
 
 const headers = API_KEY ? { "Api-Key": API_KEY } : {};
-console.log(`fetching... ${url}`);
+console.log(`fetching... ${url.toString()}`);
 const res = await fetch(url, { headers });
 if (!res.ok) throw new Error(`HTTP ${res.status} from ${url.origin}`);
 
